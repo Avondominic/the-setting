@@ -66,6 +66,10 @@ export default function Home() {
             <span data-hero-line className="hero-line-2">We find the spots.</span>
             <span data-hero-line className="hero-line-3">You find yourself.</span>
           </h1>
+
+          <a data-hero-line href="/register" className="hero-cta">
+            Join a trip →
+          </a>
         </div>
 
         {/* Mobile-only scroll hint */}

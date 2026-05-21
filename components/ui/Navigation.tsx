@@ -93,7 +93,7 @@ export default function Navigation() {
 
             {/* CTA */}
             <motion.a
-              href="#trips"
+              href="/register"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 * NAV_LINKS.length, duration: 0.35, ease: "easeOut" }}
