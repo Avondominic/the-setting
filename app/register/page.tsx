@@ -63,19 +63,13 @@ export default function RegisterPage() {
     setLoading(true);
     setError(false);
     try {
-      await fetch(process.env.NEXT_PUBLIC_SHEETS_URL!, {
+      const res = await fetch("/api/register", {
         method: "POST",
-        mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          timestamp: new Date().toISOString(),
-          name: name.trim(),
-          email: email.trim(),
-          mobile: mobile.trim(),
-          source: "website",
-        }),
+        body: JSON.stringify({ name, email, mobile }),
       });
-      // no-cors: can't read response — treat as success
+      const data = await res.json();
+      if (!data.ok) throw new Error("submit failed");
       setSuccess(true);
     } catch {
       setError(true);
