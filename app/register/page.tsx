@@ -391,7 +391,7 @@ export default function RegisterPage() {
                     id="reg-mobile"
                     className={`reg-input${errors.mobile ? " invalid" : ""}`}
                     type="tel"
-                    placeholder="Enter your mobile number"
+                    placeholder="Enter your contact number"
                     value={mobile}
                     onChange={(e) => { setMobile(e.target.value); setErrors((p) => ({ ...p, mobile: undefined })); }}
                     autoComplete="tel"
