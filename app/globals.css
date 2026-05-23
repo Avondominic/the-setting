@@ -30,7 +30,7 @@ body {
   background: var(--ink);
   color: var(--paper);
   font-family: var(--font-cormorant), "Georgia", serif;
-  cursor: none;
+  cursor: auto;
   overflow-x: hidden;
 }
 
@@ -105,7 +105,7 @@ body {
 /* ── Hero ── */
 .hero-inner {
   position: absolute;
-  top: 40%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -120,13 +120,13 @@ body {
 .hero-eyebrow {
   font-family: var(--font-syne);
   font-weight: 800;
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
   letter-spacing: 0.06em;
   color: rgba(242,237,228,0.82);
   text-transform: uppercase;
   text-shadow: 0 0 40px rgba(212,82,42,0.2), 0 0 80px rgba(0,0,0,0.5);
   line-height: 1;
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
 }
 .hero-headline {
   display: flex;
@@ -141,32 +141,32 @@ body {
 .hero-line-1 {
   font-family: var(--font-syne);
   font-weight: 400;
-  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+  font-size: clamp(0.85rem, 1.5vw, 1.2rem);
   color: var(--fog);
 }
 .hero-line-2 {
   font-family: var(--font-syne);
   font-weight: 600;
-  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+  font-size: clamp(0.85rem, 1.5vw, 1.2rem);
   color: var(--fog);
 }
 .hero-line-3 {
   font-family: var(--font-syne);
   font-weight: 700;
-  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+  font-size: clamp(0.85rem, 1.5vw, 1.2rem);
   color: var(--paper);
 }
 .hero-cta {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1.75rem;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   color: var(--paper);
   text-decoration: none;
   text-transform: uppercase;
   border: 1px solid rgba(242,237,228,0.35);
-  padding: 0.75rem 1.5rem;
+  padding: 0.65rem 1.3rem;
   transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 .hero-cta:hover {
@@ -190,9 +190,9 @@ body {
     text-align: left;
   }
   .hero-eyebrow {
-    font-size: clamp(2.4rem, 11vw, 3.5rem);
+    font-size: clamp(2.6rem, 10vw, 3.4rem);
     letter-spacing: 0.04em;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
     text-shadow: 0 0 30px rgba(212,82,42,0.25), 0 0 50px rgba(0,0,0,0.5);
   }
   .hero-headline {
@@ -202,9 +202,9 @@ body {
     gap: 0.35em;
   }
   .hero-line-1, .hero-line-2, .hero-line-3 {
-    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    font-size: clamp(0.8rem, 3.2vw, 1rem);
   }
-  .hero-cta { margin-top: 1.5rem; font-size: 0.7rem; }
+  .hero-cta { margin-top: 1.25rem; font-size: 0.6rem; padding: 0.6rem 1.1rem; }
   .hero-scroll-hint {
     display: block;
     position: absolute;
