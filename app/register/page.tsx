@@ -80,7 +80,7 @@ export default function RegisterPage() {
 
   return (
     <>
-      <style>{`
+      <style suppressHydrationWarning>{`
         .reg-page {
           min-height: 100vh;
           display: flex;
@@ -94,7 +94,7 @@ export default function RegisterPage() {
           flex-shrink: 0;
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
+          justify-content: center;
           padding: 3.5rem;
           overflow: hidden;
         }
@@ -191,7 +191,7 @@ export default function RegisterPage() {
           min-height: 44px;
         }
         .reg-input:focus { border-bottom-color: var(--ember); }
-        #reg-mobile { font-family: var(--font-syne); font-size: 1rem; }
+        #reg-mobile { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
         .reg-input::placeholder { color: rgba(122,117,112,0.45); }
         .reg-input.invalid { border-bottom-color: #ef4444; }
         .reg-error {
@@ -327,11 +327,11 @@ export default function RegisterPage() {
               THE SETTING<span className="reg-brand-dot">·</span>
             </p>
             <h1 className="reg-headline">{`One trip.\nEverything changes.`}</h1>
-            <p className="reg-sub">{`Offbeat places. Vetted people.\nUnder ₹15k. Always.`}</p>
+            <p className="reg-sub">{`Offbeat places. Vetted people.\nReal trips. No fluff.`}</p>
             <div className="reg-badges">
-              <span className="reg-badge">30 people max</span>
+              <span className="reg-badge">Small groups</span>
               <span className="reg-badge">Everyone vetted</span>
-              <span className="reg-badge">₹10–15k all in</span>
+              <span className="reg-badge">Offbeat always</span>
             </div>
           </div>
         </div>
