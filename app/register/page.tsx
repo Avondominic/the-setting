@@ -114,7 +114,7 @@ export default function RegisterPage() {
           font-size: clamp(1.8rem, 3.5vw, 3rem);
           color: var(--paper);
           line-height: 1.05;
-          margin-top: 1rem;
+          margin-top: 1.8rem;
           white-space: pre-line;
         }
         .reg-sub {
@@ -122,14 +122,14 @@ export default function RegisterPage() {
           font-style: italic;
           font-size: 1rem;
           color: var(--dust);
-          margin-top: 1rem;
+          margin-top: 1.8rem;
           white-space: pre-line;
           line-height: 1.6;
         }
         .reg-badges {
           display: flex;
           gap: 1.5rem;
-          margin-top: 2rem;
+          margin-top: 3rem;
           flex-wrap: wrap;
         }
         .reg-badge {
