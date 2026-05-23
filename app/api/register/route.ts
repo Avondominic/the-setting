@@ -8,7 +8,10 @@ export async function POST(req: NextRequest) {
     const { name, email, mobile } = await req.json();
 
     const params = new URLSearchParams();
-    params.append("timestamp", new Date().toISOString());
+    const now = new Date();
+    const ist = new Date(now.getTime() + 5.5 * 60 * 60 * 1000);
+    const timestamp = ist.toISOString().replace("T", " ").slice(0, 19);
+    params.append("timestamp", timestamp);
     params.append("name", name);
     params.append("email", email);
     params.append("mobile", mobile);
