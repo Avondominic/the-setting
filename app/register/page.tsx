@@ -186,13 +186,14 @@ export default function RegisterPage() {
           color: var(--paper);
           font-family: var(--font-cormorant);
           font-size: 1.1rem;
+          font-variant-numeric: lining-nums;
+          font-feature-settings: "lnum" 1;
           padding: 0.75rem 0;
           outline: none;
           transition: border-color 0.3s ease;
           min-height: 44px;
         }
         .reg-input:focus { border-bottom-color: var(--ember); }
-        #reg-mobile { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
         .reg-input::placeholder { color: rgba(122,117,112,0.45); }
         .reg-input.invalid { border-bottom-color: #ef4444; }
         .reg-error {
@@ -365,7 +366,7 @@ export default function RegisterPage() {
                     placeholder="What do we call you?"
                     value={name}
                     onChange={(e) => { setName(e.target.value); setErrors((p) => ({ ...p, name: undefined })); }}
-                    autoComplete="name"
+                    autoComplete="off"
                   />
                   <span className="reg-error">{errors.name ?? ""}</span>
                 </div>
@@ -380,7 +381,7 @@ export default function RegisterPage() {
                     placeholder="your@email.com"
                     value={email}
                     onChange={(e) => { setEmail(e.target.value); setErrors((p) => ({ ...p, email: undefined })); }}
-                    autoComplete="email"
+                    autoComplete="off"
                   />
                   <span className="reg-error">{errors.email ?? ""}</span>
                 </div>
@@ -395,7 +396,7 @@ export default function RegisterPage() {
                     placeholder="Enter your contact number"
                     value={mobile}
                     onChange={(e) => { setMobile(e.target.value); setErrors((p) => ({ ...p, mobile: undefined })); }}
-                    autoComplete="tel"
+                    autoComplete="off"
                   />
                   <span className="reg-error">{errors.mobile ?? ""}</span>
                 </div>
