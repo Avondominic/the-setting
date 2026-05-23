@@ -329,9 +329,9 @@ export default function RegisterPage() {
             <h1 className="reg-headline">{`One trip.\nEverything changes.`}</h1>
             <p className="reg-sub">{`Offbeat places. Vetted people.\nReal trips. No fluff.`}</p>
             <div className="reg-badges">
-              <span className="reg-badge">Small groups</span>
-              <span className="reg-badge">Everyone vetted</span>
-              <span className="reg-badge">Offbeat always</span>
+              <span className="reg-badge">Crazy</span>
+              <span className="reg-badge">Memorable</span>
+              <span className="reg-badge">Adventurous</span>
             </div>
           </div>
         </div>
