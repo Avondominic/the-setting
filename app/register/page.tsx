@@ -183,8 +183,8 @@ export default function RegisterPage() {
           border: none;
           border-bottom: 1px solid rgba(122,117,112,0.35);
           color: var(--paper);
-          font-family: var(--font-cormorant);
-          font-size: 1.1rem;
+          font-family: var(--font-syne);
+          font-size: 1rem;
           padding: 0.75rem 0;
           outline: none;
           transition: border-color 0.3s ease;
