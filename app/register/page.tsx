@@ -52,10 +52,8 @@ export default function RegisterPage() {
     if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim()))
       e.email = "Please enter a valid email address";
     const digits = mobile.replace(/\D/g, "");
-    if (mobile.trim().startsWith("+91") || mobile.trim().startsWith("91"))
-      e.mobile = "Enter 10-digit number without +91";
-    else if (digits.length !== 10)
-      e.mobile = "Enter a valid 10-digit mobile number";
+    if (digits.length < 7 || digits.length > 12)
+      e.mobile = "Please enter a valid contact number";
     setErrors(e);
     return Object.keys(e).length === 0;
   }
@@ -393,7 +391,7 @@ export default function RegisterPage() {
                     id="reg-mobile"
                     className={`reg-input${errors.mobile ? " invalid" : ""}`}
                     type="tel"
-                    placeholder="10-digit number"
+                    placeholder="Your contact number"
                     value={mobile}
                     onChange={(e) => { setMobile(e.target.value); setErrors((p) => ({ ...p, mobile: undefined })); }}
                     autoComplete="tel"
