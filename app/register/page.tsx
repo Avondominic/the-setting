@@ -299,8 +299,9 @@ export default function RegisterPage() {
           }
           .reg-right {
             width: 100%;
-            padding: 2.5rem 1.25rem;
-            justify-content: flex-start;
+            padding: 2.5rem 1.25rem 3rem;
+            justify-content: center;
+            min-height: 58vh;
           }
           .reg-input { font-size: 16px; }
           .reg-success { align-items: center; text-align: center; padding: 2rem 0; }
