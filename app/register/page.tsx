@@ -49,10 +49,13 @@ export default function RegisterPage() {
     const e: FormErrors = {};
     if (!name.trim() || name.trim().length < 2)
       e.name = "Please enter your name";
-    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))
-      e.email = "Please enter a valid email";
-    if (!mobile.trim() || mobile.replace(/\D/g, "").length < 10)
-      e.mobile = "Please enter a valid mobile number";
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim()))
+      e.email = "Please enter a valid email address";
+    const digits = mobile.replace(/\D/g, "");
+    if (mobile.trim().startsWith("+91") || mobile.trim().startsWith("91"))
+      e.mobile = "Enter 10-digit number without +91";
+    else if (digits.length !== 10)
+      e.mobile = "Enter a valid 10-digit mobile number";
     setErrors(e);
     return Object.keys(e).length === 0;
   }
@@ -390,7 +393,7 @@ export default function RegisterPage() {
                     id="reg-mobile"
                     className={`reg-input${errors.mobile ? " invalid" : ""}`}
                     type="tel"
-                    placeholder="+91 XXXXX XXXXX"
+                    placeholder="10-digit number"
                     value={mobile}
                     onChange={(e) => { setMobile(e.target.value); setErrors((p) => ({ ...p, mobile: undefined })); }}
                     autoComplete="tel"
