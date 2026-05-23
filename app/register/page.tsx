@@ -201,6 +201,7 @@ export default function RegisterPage() {
           color: #ef4444;
           margin-top: 0.4rem;
           display: block;
+          min-height: 1rem;
         }
 
         /* Button */
@@ -366,7 +367,7 @@ export default function RegisterPage() {
                     onChange={(e) => { setName(e.target.value); setErrors((p) => ({ ...p, name: undefined })); }}
                     autoComplete="name"
                   />
-                  {errors.name && <span className="reg-error">{errors.name}</span>}
+                  <span className="reg-error">{errors.name ?? ""}</span>
                 </div>
 
                 {/* Email */}
@@ -381,7 +382,7 @@ export default function RegisterPage() {
                     onChange={(e) => { setEmail(e.target.value); setErrors((p) => ({ ...p, email: undefined })); }}
                     autoComplete="email"
                   />
-                  {errors.email && <span className="reg-error">{errors.email}</span>}
+                  <span className="reg-error">{errors.email ?? ""}</span>
                 </div>
 
                 {/* Mobile */}
@@ -396,7 +397,7 @@ export default function RegisterPage() {
                     onChange={(e) => { setMobile(e.target.value); setErrors((p) => ({ ...p, mobile: undefined })); }}
                     autoComplete="tel"
                   />
-                  {errors.mobile && <span className="reg-error">{errors.mobile}</span>}
+                  <span className="reg-error">{errors.mobile ?? ""}</span>
                 </div>
 
                 <button ref={btnRef} className="reg-btn" type="submit" disabled={loading}>
